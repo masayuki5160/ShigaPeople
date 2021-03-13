@@ -15,9 +15,6 @@ export default function App() {
         <Stack.Screen
           name='ShigaNews'
           component={ShigaNewsScreen}
-          options={{
-            title: '滋賀'
-          }}
         />
       </Stack.Navigator>
     </NavigationContainer>
