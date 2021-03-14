@@ -3,6 +3,10 @@ import {View, Text, StyleSheet, FlatList} from 'react-native';
 import * as vm from './ShigaNewsViewModel';
 import { List } from 'react-native-paper';
 
+vm.fetchRss().then(() => {
+    console.log('get responce');
+});
+
 export const ShigaNewsScreen = () => {
     return (
         <View style={styles.container}>

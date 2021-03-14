@@ -10,3 +10,11 @@ export const news = [
         createdAt: 1585574700002,
     },
 ];
+
+export const fetchRss = async () => {
+    // TODO: 滋賀のRSSに変更する
+    let response = await fetch('https://www.city.otsu.lg.jp/cgi-bin/feed.php?type=rss_2.0&new1=1');
+    console.log('result:', response.status);
+    console.log('result:', response.body);
+    // TODO: XMLをパースする
+}
