@@ -1,3 +1,5 @@
+import { parse } from 'fast-xml-parser';
+
 export const barTitle: String = '滋賀';
 
 export const news = [
@@ -16,5 +18,9 @@ export const fetchRss = async () => {
     let response = await fetch('https://www.city.otsu.lg.jp/cgi-bin/feed.php?type=rss_2.0&new1=1');
     console.log('result:', response.status);
     console.log('result:', response.body);
+    let responceText = await response.text();
     // TODO: XMLをパースする
+    let obj = parse(responceText);
+    // console.log('result', obj);
+    console.log('result->item', obj['rdf:RDF']['item']);
 }
