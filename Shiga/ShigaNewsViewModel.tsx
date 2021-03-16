@@ -14,13 +14,9 @@ export const news = [
 ];
 
 export const fetchRss = async () => {
-    // TODO: 滋賀のRSSに変更する
-    let response = await fetch('https://www.city.otsu.lg.jp/cgi-bin/feed.php?type=rss_2.0&new1=1');
+    let response = await fetch('https://www.pref.shiga.lg.jp/file/rss/kensei_koho_e-shinbun_oshirase_index.rss');
     console.log('result:', response.status);
-    console.log('result:', response.body);
     let responceText = await response.text();
-    // TODO: XMLをパースする
     let obj = parse(responceText);
-    // console.log('result', obj);
-    console.log('result->item', obj['rdf:RDF']['item']);
+    console.log('result', obj['rss']['channel']['item']);
 }
