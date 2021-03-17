@@ -7,13 +7,14 @@ export default class ShigaNewsScreen extends React.Component {
     constructor(props: any) {
         super(props);
         this.state = {
+            news: []
         }
     }
 
-    componentDidMount() {
-        vm.fetchRss().then(() => {
-            console.log('get responce!!!');
-        });
+    async componentDidMount() {
+        let news = await vm.fetchRss();
+        console.log('Screen: ', news);
+        this.setState({news: news});
     }
 
     componentWillUnmount() {
@@ -24,7 +25,7 @@ export default class ShigaNewsScreen extends React.Component {
             <View style={styles.container}>
                 <FlatList 
                     style={styles.list}
-                    data={vm.news}
+                    data={vm.news}// TODO: あとで変更する
                     keyExtractor={item => '${item.createdAt}'}
                     renderItem={({item}) => (
                         <List.Item 
