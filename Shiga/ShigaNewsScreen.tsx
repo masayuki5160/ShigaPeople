@@ -3,26 +3,39 @@ import {View, Text, StyleSheet, FlatList} from 'react-native';
 import * as vm from './ShigaNewsViewModel';
 import { List } from 'react-native-paper';
 
-vm.fetchRss().then(() => {
-    console.log('get responce');
-});
+export default class ShigaNewsScreen extends React.Component {
+    constructor(props: any) {
+        super(props);
+        this.state = {
+        }
+    }
 
-export const ShigaNewsScreen = () => {
-    return (
-        <View style={styles.container}>
-            <FlatList 
-                style={styles.list}
-                data={vm.news}
-                keyExtractor={item => '${item.createdAt}'}
-                renderItem={({item}) => (
-                    <List.Item 
-                        title={item.text}
-                        description={item.createdAt}
-                    />
-                )}
-            />
-        </View>
-    );
+    componentDidMount() {
+        vm.fetchRss().then(() => {
+            console.log('get responce!!!');
+        });
+    }
+
+    componentWillUnmount() {
+    }
+
+    render() {
+        return (
+            <View style={styles.container}>
+                <FlatList 
+                    style={styles.list}
+                    data={vm.news}
+                    keyExtractor={item => '${item.createdAt}'}
+                    renderItem={({item}) => (
+                        <List.Item 
+                            title={item.text}
+                            description={item.createdAt}
+                        />
+                    )}
+                />
+            </View>
+        );
+    }
 }
 
 const styles = StyleSheet.create({
