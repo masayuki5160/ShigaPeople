@@ -16,7 +16,7 @@ export default function ShigaNewsScreen() {
                     <List.Item 
                         title={item.text}
                         description={item.createdAt}
-                        onPress={() => {navigation.navigate('ShigaNewsWebViewScreen')}}
+                        onPress={() => {navigation.navigate('ShigaNewsWebViewScreen', {url: 'https://google.co.jp'})}}
                     />
                 )}
             />
