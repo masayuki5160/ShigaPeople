@@ -1,31 +1,17 @@
 import React from 'react';
-import {View, Text, StyleSheet, FlatList} from 'react-native';
+import {StyleSheet} from 'react-native';
 import 'react-native-gesture-handler';
-import { NavigationContainer, StackActions } from '@react-navigation/native';
-import { createStackNavigator, StackView } from '@react-navigation/stack';
+import { createStackNavigator } from '@react-navigation/stack';
 import ShigaNewsScreen from './ShigaNewsScreen';
 
-export default class ShigaHomeScreen extends React.Component {
-    constructor(props: any) {
-        super(props);
-        this.state = {
-        }
-    }
+const Stack = createStackNavigator();
 
-    componentDidMount() {
-    }
-
-    componentWillUnmount() {
-    }
-
-    render() {
-        const Stack = createStackNavigator()
-        return (
-            <Stack.Navigator initialRouteName='ShigaNewsScreen'>
-                <Stack.Screen name='ShigaNewsScreen' component={ShigaNewsScreen}/>
-            </Stack.Navigator>
-        );
-    }
+export default function ShigaHomeScreen() {
+    return(
+        <Stack.Navigator initialRouteName='ShigaNewsScreen'>
+            <Stack.Screen name='ShigaNewsScreen' component={ShigaNewsScreen}/>
+        </Stack.Navigator>
+    );
 }
 
 const styles = StyleSheet.create({
