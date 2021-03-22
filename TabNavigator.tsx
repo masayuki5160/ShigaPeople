@@ -3,7 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 // import Screens
 import ShigaHomeScreen from './Shiga/ShigaHomeScreen';
-import OtsuHomeScreen from './Otsu/OtsuHomeScreen';
+import AreasHomeScreen from './Areas/AreasHomeScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -12,7 +12,7 @@ export default function TabNavigator() {
       <NavigationContainer>
         <Tab.Navigator>
           <Tab.Screen name="ShigaHomeScreen" component={ShigaHomeScreen}/>
-          <Tab.Screen name="OtsuHomeScreen" component={OtsuHomeScreen}/>
+          <Tab.Screen name="AreasHomeScreen" component={AreasHomeScreen}/>
         </Tab.Navigator>
       </NavigationContainer>
   );
