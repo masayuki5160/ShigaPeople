@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/core';
 import { parse } from 'fast-xml-parser';
 
 export const barTitle: String = '一覧';
@@ -11,6 +12,6 @@ const areas = [
     },
 ];
 
-export const fetch = () => {    
+export const fetch = () => {
     return areas;
 }

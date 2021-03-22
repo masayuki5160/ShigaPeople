@@ -3,22 +3,7 @@ import {View, Text, StyleSheet, FlatList} from 'react-native';
 import * as vm from './OtsuNewsViewModel';
 import { List } from 'react-native-paper';
 
-export default class OtsuNewsScreen extends React.Component {
-    constructor(props: any) {
-        super(props);
-        this.state = {
-        }
-    }
-
-    async componentDidMount() {
-        let news = await vm.fetchRss();
-        console.log('Screen: ', news);
-    }
-
-    componentWillUnmount() {
-    }
-
-    render() {
+export default function OtsuNewsScreen() {
         return (
             <View style={styles.container}>
                 <FlatList 
@@ -34,7 +19,6 @@ export default class OtsuNewsScreen extends React.Component {
                 />
             </View>
         );
-    }
 }
 
 const styles = StyleSheet.create({
