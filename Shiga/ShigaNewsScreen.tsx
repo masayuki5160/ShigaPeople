@@ -1,22 +1,21 @@
 import React from 'react';
 import {View, Text, StyleSheet, FlatList} from 'react-native';
-import * as vm from './ShigaNewsViewModel';
 import { List } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/core';
 
-export default function ShigaNewsScreen() {
+export default function ShigaNewsScreen(props: any) {
     const navigation = useNavigation();
     return (
         <View style={styles.container}>
             <FlatList 
                 style={styles.list}
-                data={vm.news}// TODO: あとで変更する
-                keyExtractor={item => '${item.createdAt}'}
+                data={props.news}
+                keyExtractor={item => '${item.pubDate}'}
                 renderItem={({item}) => (
                     <List.Item 
-                        title={item.text}
-                        description={item.createdAt}
-                        onPress={() => {navigation.navigate('ShigaNewsWebViewScreen', {url: 'https://google.co.jp'})}}
+                        title={item.title}
+                        description={item.description}
+                        onPress={() => {navigation.navigate('ShigaNewsWebViewScreen', {url: item.link})}}
                     />
                 )}
             />
