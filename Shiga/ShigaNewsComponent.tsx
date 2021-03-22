@@ -2,7 +2,15 @@ import React from 'react';
 import ShigaNewsScreen from './ShigaNewsScreen';
 import { fetchRss } from './ShigaNewsViewModel';
 
-export default class ShigaNewsComponent extends React.Component {
+export interface Props {
+    news: {}
+}
+  
+interface State {
+    news: {}
+}
+
+export default class ShigaNewsComponent extends React.Component<Props, State> {
     constructor(props: any) {
         super(props);
         this.state = {
