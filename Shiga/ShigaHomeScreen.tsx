@@ -21,14 +21,9 @@ export default class ShigaHomeScreen extends React.Component {
     render() {
         const Stack = createStackNavigator()
         return (
-            <NavigationContainer>
-                <Stack.Navigator initialRouteName='ShigaNewsScreen'>
-                    <Stack.Screen
-                    name='ShigaNewsScreen'
-                    component={ShigaNewsScreen}
-                    />
-                </Stack.Navigator>
-            </NavigationContainer>
+            <Stack.Navigator initialRouteName='ShigaNewsScreen'>
+                <Stack.Screen name='ShigaNewsScreen' component={ShigaNewsScreen}/>
+            </Stack.Navigator>
         );
     }
 }

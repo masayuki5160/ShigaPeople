@@ -21,14 +21,9 @@ export default class OtsuHomeScreen extends React.Component {
     render() {
         const Stack = createStackNavigator()
         return (
-            <NavigationContainer>
-                <Stack.Navigator initialRouteName='OtsuNewsScreen'>
-                    <Stack.Screen
-                    name='OtsuNewsScreen'
-                    component={OtsuNewsScreen}
-                    />
-                </Stack.Navigator>
-            </NavigationContainer>
+            <Stack.Navigator initialRouteName='OtsuNewsScreen'>
+                <Stack.Screen name='OtsuNewsScreen' component={OtsuNewsScreen}/>
+            </Stack.Navigator>
         );
     }
 }
