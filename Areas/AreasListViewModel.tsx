@@ -6,6 +6,6 @@ export const areas = [
     },
     {
         name: "大津市",
-        screen: "OtsuNewsScreen"
+        screen: "OtsuNewsComponent"
     },
 ];

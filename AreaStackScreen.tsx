@@ -3,7 +3,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 // import Screens
 import AreasListScreen from './Areas/AreasListScreen';
 import ShigaNewsComponent from './Shiga/ShigaNewsComponent';
-import OtsuNewsScreen from './Otsu/OtsuNewsScreen';
+import OtsuNewsComponent from './Otsu/OtsuNewsComponent';
+import ShigaNewsWebViewScreen from './Shiga/ShigaNewsWebViewScreen';
 
 const Stack = createStackNavigator();
 
@@ -12,7 +13,8 @@ export default function areaStackScreen() {
       <Stack.Navigator initialRouteName='AreasListScreen'>
         <Stack.Screen name='AreasListScreen' component={AreasListScreen}/>
         <Stack.Screen name='ShigaNewsComponent' component={ShigaNewsComponent}/>
-        <Stack.Screen name='OtsuNewsScreen' component={OtsuNewsScreen}/>
+        <Stack.Screen name='OtsuNewsComponent' component={OtsuNewsComponent}/>
+        <Stack.Screen name='ShigaNewsWebViewScreen' component={ShigaNewsWebViewScreen}/>
       </Stack.Navigator>
     );
   }

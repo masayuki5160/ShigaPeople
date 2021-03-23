@@ -1,5 +1,4 @@
 import React from 'react';
-import {StyleSheet} from 'react-native';
 import 'react-native-gesture-handler';
 import { createStackNavigator } from '@react-navigation/stack';
 // import Screens
@@ -8,7 +7,7 @@ import ShigaNewsWebViewScreen from './ShigaNewsWebViewScreen';
 
 const Stack = createStackNavigator();
 
-export default function ShigaHomeScreen() {
+export default function ShigaStackScreen() {
     return(
         <Stack.Navigator initialRouteName='ShigaNewsComponent'>
             <Stack.Screen name='ShigaNewsComponent' component={ShigaNewsComponent}/>
@@ -16,12 +15,3 @@ export default function ShigaHomeScreen() {
         </Stack.Navigator>
     );
 }
-
-const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-    },
-    list: {
-        flex: 1
-    },
-  });

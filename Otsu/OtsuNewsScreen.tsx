@@ -1,19 +1,21 @@
 import React from 'react';
 import {View, Text, StyleSheet, FlatList} from 'react-native';
-import * as vm from './OtsuNewsViewModel';
 import { List } from 'react-native-paper';
+import { useNavigation } from '@react-navigation/core';
 
-export default function OtsuNewsScreen() {
+export default function OtsuNewsScreen(props: any) {
+    const navigation = useNavigation();
     return (
         <View style={styles.container}>
             <FlatList 
                 style={styles.list}
-                data={vm.news}
-                keyExtractor={item => '${item.createdAt}'}
+                data={props.news}
+                keyExtractor={item => '${item.dc:date}'}
                 renderItem={({item}) => (
                     <List.Item 
-                        title={item.text}
-                        description={item.createdAt}
+                        title={item.title}
+                        description={item['dc:date']}
+                        onPress={() => {navigation.navigate('ShigaNewsWebViewScreen', {url: item.link})}}
                     />
                 )}
             />
