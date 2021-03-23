@@ -1,15 +1,35 @@
-import { parse } from 'fast-xml-parser';
+import React from 'react';
+import OtsuNewsScreen from './OtsuNewsScreen';
+import { fetchRss } from './OtsuNewsModel';
 
-export const barTitle: String = '滋賀';
-const rss = 'https://www.city.otsu.lg.jp/cgi-bin/feed.php?type=rss_2.0&new1=1';
+export interface Props {
+    news: {}
+}
+  
+interface State {
+    news: {}
+}
 
-export const fetchRss = async () => {
-    // TODO: 例外処理を入れたい
-    let response = await fetch(rss);
-    console.log('result:', response.status);
-    let responceText = await response.text();
-    let obj = parse(responceText);
-    let res = obj['rdf:RDF']['item']
+export default class OtsuNewsViewModel extends React.Component<Props, State> {
+    constructor(props: any) {
+        super(props);
+        this.state = {
+            news: {},
+        };
+    }
 
-    return res;
+    async componentDidMount() {
+        let news = await fetchRss();
+        this.setState({news: news});
+    }
+
+    componentWillUnmount() {
+    }
+
+    render() {
+        const news = this.state.news;
+        return(
+            <OtsuNewsScreen news={news}/>
+        );
+    }
 }
