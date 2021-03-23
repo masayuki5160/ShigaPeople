@@ -1,15 +1,35 @@
-import { parse } from 'fast-xml-parser';
+import React from 'react';
+import ShigaNewsScreen from './ShigaNewsScreen';
+import { fetchRss } from './ShigaNewsModel';
 
-export const barTitle: String = '滋賀';
-const shigaRSSUrl = 'https://www.pref.shiga.lg.jp/file/rss/kensei_koho_e-shinbun_oshirase_index.rss';
+export interface Props {
+    news: {}
+}
+  
+interface State {
+    news: {}
+}
 
-export const fetchRss = async () => {
-    let response = await fetch(shigaRSSUrl);
-    
-    // TODO: 例外処理
-    let responceText = await response.text();
-    let obj = parse(responceText);
-    let items = obj['rss']['channel']['item'];
-    
-    return items;
+export default class ShigaNewsViewModel extends React.Component<Props, State> {
+    constructor(props: any) {
+        super(props);
+        this.state = {
+            news: {},
+        };
+    }
+
+    async componentDidMount() {
+        let news = await fetchRss();
+        this.setState({news: news});
+    }
+
+    componentWillUnmount() {
+    }
+
+    render() {
+        const news = this.state.news;
+        return(
+            <ShigaNewsScreen news={news}/>
+        );
+    }
 }
