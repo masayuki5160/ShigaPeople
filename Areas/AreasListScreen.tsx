@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, StyleSheet, FlatList} from 'react-native';
-import * as vm from './AreasListViewModel';
+import {areas} from './AreasListViewModel';
 import { List } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/core';
 
@@ -10,13 +10,12 @@ export default function AreasListScreen() {
         <View style={styles.container}>
             <FlatList 
                 style={styles.list}
-                data={vm.fetch()}
+                data={areas}
                 keyExtractor={item => '${item.name}'}
                 renderItem={({item}) => (
                     <List.Item 
                         title={item.name}
-                        description='test'
-                        onPress={() => {navigation.navigate('OtsuNewsScreen')}}
+                        onPress={() => {navigation.navigate(item.screen)}}
                     />
                 )}
             />

@@ -3,15 +3,13 @@ import { parse } from 'fast-xml-parser';
 
 export const barTitle: String = '一覧';
 
-const areas = [
+export const areas = [
     {
         name: "滋賀県",
+        screen: "ShigaNewsComponent"
     },
     {
         name: "大津市",
+        screen: "OtsuNewsScreen"
     },
 ];
-
-export const fetch = () => {
-    return areas;
-}
