@@ -16,7 +16,6 @@ export default function TabNavigator() {
             name="滋賀県"
             component={ShigaStackScreen}
             options={{
-              //tabBarLabel: '',
               tabBarIcon: ({ color, size }) => (
                 <AntDesign name="infocirlceo" size={24} color="black" />
               ),
@@ -26,7 +25,6 @@ export default function TabNavigator() {
             name="市一覧"
             component={AreaStackScreen}
             options={{
-              //tabBarLabel: '',
               tabBarIcon: ({ color, size }) => (
                 <Feather name="list" size={24} color="black" />
               ),
