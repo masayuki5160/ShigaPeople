@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { StyleSheet, SafeAreaView } from 'react-native';
 import { AntDesign, Feather } from '@expo/vector-icons';
 // import Screens
 import AreaStackScreen from './AreaStackScreen';
@@ -10,6 +11,7 @@ const Tab = createBottomTabNavigator();
 
 export default function TabNavigator() {
   return (
+    <SafeAreaView style={styles.container}>
       <NavigationContainer>
         <Tab.Navigator>
           <Tab.Screen
@@ -32,5 +34,12 @@ export default function TabNavigator() {
           />
         </Tab.Navigator>
       </NavigationContainer>
+    </SafeAreaView>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});
