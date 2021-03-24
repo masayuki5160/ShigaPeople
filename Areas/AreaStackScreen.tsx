@@ -1,10 +1,10 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 // import Screens
-import AreasListScreen from './Areas/AreasListScreen';
-import ShigaNewsViewModel from './Shiga/ShigaNewsViewModel';
-import OtsuNewsViewModel from './Otsu/OtsuNewsViewModel';
-import ShigaNewsWebViewScreen from './Shiga/ShigaNewsWebViewScreen';
+import AreasListScreen from './AreasListScreen';
+import ShigaNewsViewModel from '../Shiga/ShigaNewsViewModel';
+import OtsuNewsViewModel from '../Otsu/OtsuNewsViewModel';
+import ShigaNewsWebViewScreen from '../Shiga/ShigaNewsWebViewScreen';
 
 const Stack = createStackNavigator();
 

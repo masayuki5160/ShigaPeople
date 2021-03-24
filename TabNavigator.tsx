@@ -4,7 +4,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { StyleSheet, SafeAreaView } from 'react-native';
 import { AntDesign, Feather } from '@expo/vector-icons';
 // import Screens
-import AreaStackScreen from './AreaStackScreen';
+import AreaStackScreen from './Areas/AreaStackScreen';
 import ShigaStackScreen from './Shiga/ShigaStackScreen';
 
 const Tab = createBottomTabNavigator();
