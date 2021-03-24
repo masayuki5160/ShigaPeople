@@ -19,7 +19,7 @@ export default function ShigaStackScreen() {
             <Stack.Screen
                 name='ShigaNewsWebViewScreen'
                 component={ShigaNewsWebViewScreen}
-                options={{headerTitle: headerTitleName}}
+                options={{headerTitle: ''}}
             />
         </Stack.Navigator>
     );
