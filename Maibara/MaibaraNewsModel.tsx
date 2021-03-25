@@ -1,5 +1,5 @@
 import { parse } from 'fast-xml-parser';
-import { RssModel } from '../Model/RssModel';
+import { RssModel } from '../common/RssModel';
 
 export default class MaibaraNewsModel implements RssModel {
     rssUrl = 'https://www.city.maibara.lg.jp/cgi-bin/feed.php?type=rss';
