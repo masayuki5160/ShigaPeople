@@ -4,6 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import AreasListScreen from './AreasListScreen';
 import OtsuNewsViewModel from '../otsu/OtsuNewsViewModel';
 import MaibaraNewsViewModel from '../maibara/MaibaraNewsViewModel';
+import KusatsuNewsViewModel from '../kusatsu/KusatsuNewsViewModel';
 import WebViewScreen from '../common/WebViewScreen';
 
 const Stack = createStackNavigator();
@@ -25,6 +26,11 @@ export default function areaStackScreen() {
           name='MaibaraNewsViewModel'
           component={MaibaraNewsViewModel}
           options={{headerTitle: '米原市の情報'}}
+        />
+        <Stack.Screen
+          name='KusatsuNewsViewModel'
+          component={KusatsuNewsViewModel}
+          options={{headerTitle: '草津市の情報'}}
         />
         <Stack.Screen
           name='WebViewScreen'
