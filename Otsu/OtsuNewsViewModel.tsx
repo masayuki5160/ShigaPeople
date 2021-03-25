@@ -1,6 +1,6 @@
 import React from 'react';
 import OtsuNewsScreen from './OtsuNewsScreen';
-import { fetchRss } from './OtsuNewsModel';
+import OtsuNewsModel from './OtsuNewsModel';
 
 export interface Props {
     news: {}
@@ -19,7 +19,8 @@ export default class OtsuNewsViewModel extends React.Component<Props, State> {
     }
 
     async componentDidMount() {
-        let news = await fetchRss();
+        let model = new OtsuNewsModel();
+        let news = await model.fetchRss();
         this.setState({news: news});
     }
 

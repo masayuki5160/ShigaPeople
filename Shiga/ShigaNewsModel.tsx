@@ -1,15 +1,16 @@
 import { parse } from 'fast-xml-parser';
+import { RssModel } from '../common/RssModel';
 
-export const barTitle: String = '滋賀';
-const shigaRSSUrl = 'https://www.pref.shiga.lg.jp/file/rss/kensei_koho_e-shinbun_oshirase_index.rss';
-
-export const fetchRss = async () => {
-    let response = await fetch(shigaRSSUrl);
+export default class ShigaNewsModel implements RssModel {
+    rssUrl = 'https://www.pref.shiga.lg.jp/file/rss/kensei_koho_e-shinbun_oshirase_index.rss';
+    async fetchRss() {
+        let response = await fetch(this.rssUrl);
     
-    // TODO: 例外処理
-    let responceText = await response.text();
-    let obj = parse(responceText);
-    let items = obj['rss']['channel']['item'];
-    
-    return items;
+        // TODO: 例外処理
+        let responceText = await response.text();
+        let obj = parse(responceText);
+        let items = obj['rss']['channel']['item'];
+        
+        return items;
+    }
 }

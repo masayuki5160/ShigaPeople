@@ -1,6 +1,6 @@
 import React from 'react';
 import ShigaNewsScreen from './ShigaNewsScreen';
-import { fetchRss } from './ShigaNewsModel';
+import ShigaNewsModel from './ShigaNewsModel';
 
 export interface Props {
     news: {}
@@ -19,7 +19,8 @@ export default class ShigaNewsViewModel extends React.Component<Props, State> {
     }
 
     async componentDidMount() {
-        let news = await fetchRss();
+        let model = new ShigaNewsModel()
+        let news = await model.fetchRss();
         this.setState({news: news});
     }
 
