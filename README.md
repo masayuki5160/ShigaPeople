@@ -1,4 +1,4 @@
-# Shiga
+# ShigaPeople
 
 ## How to build
 
