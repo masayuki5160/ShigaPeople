@@ -11,7 +11,7 @@ export default function AreasListScreen() {
             <FlatList 
                 style={styles.list}
                 data={areas}
-                keyExtractor={item => '${item.name}'}
+                keyExtractor={(item, index) => index.toString()}
                 renderItem={({item}) => (
                     <List.Item 
                         title={item.name}

@@ -10,7 +10,7 @@ export default function ShigaNewsScreen(props: any) {
             <FlatList 
                 style={styles.list}
                 data={props.news}
-                keyExtractor={item => '${item.pubDate}'}
+                keyExtractor={(item, index) => index.toString()}
                 renderItem={({item}) => (
                     <List.Item 
                         title={item.title}
