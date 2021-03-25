@@ -18,11 +18,6 @@ export default function areaStackScreen() {
           options={{headerTitle: '各市の情報'}}
         />
         <Stack.Screen
-          name='ShigaNewsViewModel'
-          component={ShigaNewsViewModel}
-          options={{headerTitle: '滋賀県の情報'}}
-        />
-        <Stack.Screen
           name='OtsuNewsViewModel'
           component={OtsuNewsViewModel}
           options={{headerTitle: '大津市の情報'}}
