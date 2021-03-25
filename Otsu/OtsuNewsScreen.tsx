@@ -14,7 +14,7 @@ export default function OtsuNewsScreen(props: any) {
                 renderItem={({item}) => (
                     <List.Item 
                         title={item.title}
-                        description={item['dc:date']}
+                        description={item.pubDate}
                         onPress={() => {navigation.navigate('WebViewScreen', {url: item.link})}}
                     />
                 )}

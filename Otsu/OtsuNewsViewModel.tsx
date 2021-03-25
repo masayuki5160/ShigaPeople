@@ -1,6 +1,7 @@
 import React from 'react';
 import OtsuNewsScreen from './OtsuNewsScreen';
 import OtsuNewsModel from './OtsuNewsModel';
+import {convertToViewData} from './OtsuNewsViewData';
 
 export interface Props {
     news: {}
@@ -21,16 +22,17 @@ export default class OtsuNewsViewModel extends React.Component<Props, State> {
     async componentDidMount() {
         let model = new OtsuNewsModel();
         let news = await model.fetchRss();
-        this.setState({news: news});
+        let viewData = convertToViewData(news);
+        this.setState({news: viewData});
     }
 
     componentWillUnmount() {
     }
 
     render() {
-        const news = this.state.news;
+        const viewData = this.state.news;
         return(
-            <OtsuNewsScreen news={news}/>
+            <OtsuNewsScreen news={viewData}/>
         );
     }
 }
