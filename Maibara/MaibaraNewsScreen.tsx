@@ -10,11 +10,11 @@ export default function MaibaraNewsScreen(props: any) {
             <FlatList 
                 style={styles.list}
                 data={props.news}
-                keyExtractor={item => '${item.dc:date}'}
+                keyExtractor={item => item.pubDate}
                 renderItem={({item}) => (
                     <List.Item 
                         title={item.title}
-                        description={item['dc:date']}
+                        description={item.pubDate}
                         onPress={() => {navigation.navigate('ShigaNewsWebViewScreen', {url: item.link})}}
                     />
                 )}
