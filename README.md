@@ -23,7 +23,7 @@ $ expo build:ios
 $ expo build:android
 ```
 
-## Other
+## Others
 
 ```
 # Check TypeScript Syntax
