@@ -15,7 +15,7 @@ export default function OtsuNewsScreen(props: any) {
                     <List.Item 
                         title={item.title}
                         description={item['dc:date']}
-                        onPress={() => {navigation.navigate('ShigaNewsWebViewScreen', {url: item.link})}}
+                        onPress={() => {navigation.navigate('WebViewScreen', {url: item.link})}}
                     />
                 )}
             />

@@ -15,7 +15,7 @@ export default function MaibaraNewsScreen(props: any) {
                     <List.Item 
                         title={item.title}
                         description={item.pubDate}
-                        onPress={() => {navigation.navigate('ShigaNewsWebViewScreen', {url: item.link})}}
+                        onPress={() => {navigation.navigate('WebViewScreen', {url: item.link})}}
                     />
                 )}
             />

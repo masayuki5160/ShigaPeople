@@ -3,7 +3,7 @@ import 'react-native-gesture-handler';
 import { createStackNavigator } from '@react-navigation/stack';
 // import Screens
 import ShigaNewsViewModel from './ShigaNewsViewModel';
-import ShigaNewsWebViewScreen from './ShigaNewsWebViewScreen';
+import WebViewScreen from '../common/WebViewScreen';
 
 const Stack = createStackNavigator();
 const headerTitleName = '滋賀県の情報';
@@ -17,8 +17,8 @@ export default function ShigaStackScreen() {
                 options={{headerTitle: headerTitleName}}
             />
             <Stack.Screen
-                name='ShigaNewsWebViewScreen'
-                component={ShigaNewsWebViewScreen}
+                name='WebViewScreen'
+                component={WebViewScreen}
                 options={{headerTitle: ''}}
             />
         </Stack.Navigator>
