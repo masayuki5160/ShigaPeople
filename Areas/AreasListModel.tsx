@@ -1,4 +1,3 @@
-export const barTitle: String = '一覧';
 export const areas = [
     {
         name: "滋賀県",
@@ -7,5 +6,9 @@ export const areas = [
     {
         name: "大津市",
         screen: "OtsuNewsViewModel"
+    },
+    {
+        name: "米原市",
+        screen: "MaibaraNewsViewModel"
     },
 ];
