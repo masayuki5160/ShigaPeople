@@ -1,6 +1,6 @@
 import React from 'react';
 import NewsScreen from './MaibaraNewsScreen';
-import { fetchRss } from './MaibaraNewsModel';
+import MaibaraNewsModel from './MaibaraNewsModel';
 
 export interface Props {
     news: {}
@@ -19,7 +19,9 @@ export default class MaibaraNewsViewModel extends React.Component<Props, State> 
     }
 
     async componentDidMount() {
-        let news = await fetchRss();
+        let model = new MaibaraNewsModel()
+        let news = await model.fetchRss();
+        // TODO: View側がRSSの構造を意識することなく表示処理ができるようにVM側で整形してあげたい
         this.setState({news: news});
     }
 

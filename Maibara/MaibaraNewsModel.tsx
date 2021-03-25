@@ -1,15 +1,16 @@
 import { parse } from 'fast-xml-parser';
+import { RssModel } from '../Model/RssModel';
 
-export const barTitle: String = '米原';
-const rss = 'https://www.city.maibara.lg.jp/cgi-bin/feed.php?type=rss';
+export default class MaibaraNewsModel implements RssModel {
+    rssUrl = 'https://www.city.maibara.lg.jp/cgi-bin/feed.php?type=rss';
 
-export const fetchRss = async () => {
+    async fetchRss() {
     // TODO: 例外処理を入れたい
-    let response = await fetch(rss);
-    console.log('result:', response.status);
+    let response = await fetch(this.rssUrl);
     let responceText = await response.text();
     let obj = parse(responceText);
     let res = obj['rdf:RDF']['item']
 
     return res;
+    }
 }
