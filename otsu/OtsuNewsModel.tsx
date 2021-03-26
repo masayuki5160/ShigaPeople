@@ -7,7 +7,9 @@ export default class OtsuNewsModel implements RssModel {
     async fetchRss() {
         // TODO: 例外処理を入れたい
         const response = await fetch(this.rssUrl);
-        console.log('result:', response.status);
+        if (response.status !== 200) {
+            return [];
+        }
         const responceText = await response.text();
         const obj = parse(responceText);
         const res = obj['rdf:RDF']['item']

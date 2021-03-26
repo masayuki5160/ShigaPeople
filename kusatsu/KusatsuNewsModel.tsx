@@ -5,12 +5,15 @@ export default class KusatsuNewsModel implements RssModel {
     rssUrl = 'https://www.city.kusatsu.shiga.jp/rss_news.xml';
 
     async fetchRss() {
-    // TODO: 例外処理を入れたい
-    const response = await fetch(this.rssUrl);
-    const responceText = await response.text();
-    const obj = parse(responceText);
-    const res = obj['rss']['channel']['item'];
+        const response = await fetch(this.rssUrl);
+        if (response.status !== 200) {
+            return [];
+        }
 
-    return res;
+        const responceText = await response.text();
+        const obj = parse(responceText);
+        const res = obj['rss']['channel']['item'];
+
+        return res;
     }
 }
