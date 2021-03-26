@@ -11,4 +11,8 @@ export const areas = [
         name: "草津市",
         screen: "KusatsuNewsViewModel"
     },
+    {
+        name: "栗東市",
+        screen: "RittoNewsViewModel"
+    },
 ];
