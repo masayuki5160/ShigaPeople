@@ -10,7 +10,7 @@ export default class RittoNewsModel implements RssModel {
     let responceText = await response.text();
     let obj = parse(responceText);
     let res = obj['rdf:RDF']['item'];
-    console.log('test=>', res);
+    
     return res;
     }
 }
