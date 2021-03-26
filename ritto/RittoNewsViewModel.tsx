@@ -20,9 +20,9 @@ export default class RittoNewsViewModel extends React.Component<Props, State> {
     }
 
     async componentDidMount() {
-        let model = new NewsModel()
-        let news = await model.fetchRss();
-        let viewData = convertToViewData(news);
+        const model = new NewsModel()
+        const news = await model.fetchRss();
+        const viewData = convertToViewData(news);
         this.setState({news: viewData});
     }
 

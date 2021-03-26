@@ -20,9 +20,9 @@ export default class OtsuNewsViewModel extends React.Component<Props, State> {
     }
 
     async componentDidMount() {
-        let model = new OtsuNewsModel();
-        let news = await model.fetchRss();
-        let viewData = convertToViewData(news);
+        const model = new OtsuNewsModel();
+        const news = await model.fetchRss();
+        const viewData = convertToViewData(news);
         this.setState({news: viewData});
     }
 

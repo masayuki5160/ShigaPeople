@@ -6,11 +6,11 @@ export default class RittoNewsModel implements RssModel {
 
     async fetchRss() {
     // TODO: 例外処理を入れたい
-    let response = await fetch(this.rssUrl);
-    let responceText = await response.text();
-    let obj = parse(responceText);
-    let res = obj['rdf:RDF']['item'];
-    
+    const response = await fetch(this.rssUrl);
+    const responceText = await response.text();
+    const obj = parse(responceText);
+    const res = obj['rdf:RDF']['item'];
+
     return res;
     }
 }

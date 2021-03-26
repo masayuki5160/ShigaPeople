@@ -20,9 +20,9 @@ export default class ShigaNewsViewModel extends React.Component<Props, State> {
     }
 
     async componentDidMount() {
-        let model = new ShigaNewsModel()
-        let news = await model.fetchRss();
-        let viewData = convertToViewData(news);
+        const model = new ShigaNewsModel()
+        const news = await model.fetchRss();
+        const viewData = convertToViewData(news);
         this.setState({news: viewData});
     }
 

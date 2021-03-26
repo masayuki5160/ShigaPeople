@@ -6,11 +6,11 @@ export default class OtsuNewsModel implements RssModel {
 
     async fetchRss() {
         // TODO: 例外処理を入れたい
-        let response = await fetch(this.rssUrl);
+        const response = await fetch(this.rssUrl);
         console.log('result:', response.status);
-        let responceText = await response.text();
-        let obj = parse(responceText);
-        let res = obj['rdf:RDF']['item']
+        const responceText = await response.text();
+        const obj = parse(responceText);
+        const res = obj['rdf:RDF']['item']
 
         return res;
     }

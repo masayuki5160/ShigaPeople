@@ -20,9 +20,9 @@ export default class MaibaraNewsViewModel extends React.Component<Props, State> 
     }
 
     async componentDidMount() {
-        let model = new MaibaraNewsModel()
-        let news = await model.fetchRss();
-        let viewData = convertToViewData(news);
+        const model = new MaibaraNewsModel()
+        const news = await model.fetchRss();
+        const viewData = convertToViewData(news);
         this.setState({news: viewData});
     }
 
