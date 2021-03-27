@@ -5,7 +5,7 @@ export function convertToViewData(rawData: []) {
         const viewData: NewsViewData = {
             title: elements['title'],
             description: elements['description'],
-            pubDate: elements['dc:date'],
+            pubDate: elements['pubDate'],
             link: elements['link'],
         };
         return viewData;

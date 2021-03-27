@@ -14,7 +14,7 @@ export default function NewsScreen(props: any) {
                 renderItem={({item}) => (
                     <List.Item 
                         title={item.title}
-                        description={item.description}
+                        description={item.pubDate}
                         onPress={() => {navigation.navigate('WebViewScreen', {url: item.link})}}
                     />
                 )}
