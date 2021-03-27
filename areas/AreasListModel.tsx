@@ -35,4 +35,8 @@ export const areas = [
         name: "豊郷町",
         screen: "ToyosatoNewsViewModel"
     },
+    {
+        name: "甲良町",
+        screen: "KouraNewsViewModel"
+    },
 ];
