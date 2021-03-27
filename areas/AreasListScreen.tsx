@@ -1,7 +1,7 @@
 import React from 'react';
-import {View, Text, StyleSheet, FlatList} from 'react-native';
+import {View, StyleSheet, FlatList} from 'react-native';
 import {areas} from './AreasListModel';
-import { List } from 'react-native-paper';
+import { List, Text, Divider } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/core';
 
 export default function AreasListScreen() {
@@ -13,10 +13,13 @@ export default function AreasListScreen() {
                 data={areas}
                 keyExtractor={(item, index) => index.toString()}
                 renderItem={({item}) => (
-                    <List.Item 
-                        title={item.name}
-                        onPress={() => {navigation.navigate(item.screen)}}
-                    />
+                    <View>
+                        <List.Item 
+                            title={item.name}
+                            onPress={() => {navigation.navigate(item.screen)}}
+                        />
+                        <Divider/>
+                    </View>
                 )}
             />
         </View>

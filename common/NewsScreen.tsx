@@ -1,6 +1,6 @@
 import React from 'react';
-import {View, Text, StyleSheet, FlatList} from 'react-native';
-import { List } from 'react-native-paper';
+import {View, StyleSheet, FlatList} from 'react-native';
+import { List, Divider, Text } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/core';
 
 export default function NewsScreen(props: any) {
@@ -12,11 +12,14 @@ export default function NewsScreen(props: any) {
                 data={props.news}
                 keyExtractor={(item, index) => index.toString()}
                 renderItem={({item}) => (
-                    <List.Item 
-                        title={item.title}
-                        description={item.pubDate}
-                        onPress={() => {navigation.navigate('WebViewScreen', {url: item.link})}}
-                    />
+                    <View>
+                        <List.Item 
+                            title={item.title}
+                            description={item.pubDate}
+                            onPress={() => {navigation.navigate('WebViewScreen', {url: item.link})}}
+                        />
+                        <Divider />
+                    </View>
                 )}
             />
         </View>
