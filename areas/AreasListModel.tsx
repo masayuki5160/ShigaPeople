@@ -28,7 +28,11 @@ export const areas = [
         screen: "HigashiomiNewsViewModel"
     },
     {
-        name: "滋賀県日野町",
+        name: "日野町",
         screen: "HinoNewsViewModel"
+    },
+    {
+        name: "豊郷町",
+        screen: "ToyosatoNewsViewModel"
     },
 ];
