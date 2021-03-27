@@ -4,7 +4,7 @@ export function convertToViewData(rawData: []) {
     const res = rawData.map((elements, index) => {
         const viewData: NewsViewData = {
             title: elements['title'],
-            description: elements['dc:date'],// 適切なデータがないためdateを格納しておく
+            description: '',// 適切なデータがないためbrankとする
             pubDate: elements['dc:date'],
             link: elements['link'],
         };
