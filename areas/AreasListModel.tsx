@@ -27,4 +27,8 @@ export const areas = [
         name: "東近江市",
         screen: "HigashiomiNewsViewModel"
     },
+    {
+        name: "滋賀県日野町",
+        screen: "HinoNewsViewModel"
+    },
 ];
