@@ -47,4 +47,8 @@ export const areas = [
         name: "長浜市",
         screen: "NagahamaNewsViewModel"
     },
+    {
+        name: "高島市",
+        screen: "TakashimaNewsViewModel"
+    },
 ];

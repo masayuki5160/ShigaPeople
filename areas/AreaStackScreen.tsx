@@ -13,6 +13,7 @@ import HinoNewsViewModel from '../hino/HinoNewsViewModel';
 import ToyosatoNewsViewModel from '../toyosato/ToyosatoNewsViewModel';
 import KouraNewsViewModel from '../koura/KouraNewsViewModel';
 import NagahamaNewsViewModel from '../nagahama/NagahamaNewsViewModel';
+import TakashimaNewsViewModel from '../takashima/TakashimaNewsViewModel';
 import TagaNewsViewModel from '../taga/TagaNewsViewModel';
 
 import WebViewScreen from '../common/WebViewScreen';
@@ -86,6 +87,11 @@ export default function areaStackScreen() {
           name='NagahamaNewsViewModel'
           component={NagahamaNewsViewModel}
           options={{headerTitle: '長浜市の情報'}}
+        />
+        <Stack.Screen
+          name='TakashimaNewsViewModel'
+          component={TakashimaNewsViewModel}
+          options={{headerTitle: '高島市の情報'}}
         />
         <Stack.Screen
           name='WebViewScreen'
