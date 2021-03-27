@@ -12,7 +12,9 @@ import HigashiomiNewsViewModel from '../higashiomi/HigashiomiNewsViewModel';
 import HinoNewsViewModel from '../hino/HinoNewsViewModel';
 import ToyosatoNewsViewModel from '../toyosato/ToyosatoNewsViewModel';
 import KouraNewsViewModel from '../koura/KouraNewsViewModel';
+import NagahamaNewsViewModel from '../nagahama/NagahamaNewsViewModel';
 import TagaNewsViewModel from '../taga/TagaNewsViewModel';
+
 import WebViewScreen from '../common/WebViewScreen';
 
 const Stack = createStackNavigator();
@@ -79,6 +81,11 @@ export default function areaStackScreen() {
           name='TagaNewsViewModel'
           component={TagaNewsViewModel}
           options={{headerTitle: '多賀町の情報'}}
+        />
+        <Stack.Screen
+          name='NagahamaNewsViewModel'
+          component={NagahamaNewsViewModel}
+          options={{headerTitle: '長浜市の情報'}}
         />
         <Stack.Screen
           name='WebViewScreen'
