@@ -4,10 +4,6 @@ export const areas = [
         screen: "OtsuNewsViewModel"
     },
     {
-        name: "米原市",
-        screen: "MaibaraNewsViewModel"
-    },
-    {
         name: "草津市",
         screen: "KusatsuNewsViewModel"
     },
@@ -42,5 +38,9 @@ export const areas = [
     {
         name: "多賀町",
         screen: "TagaNewsViewModel"
+    },
+    {
+        name: "米原市",
+        screen: "MaibaraNewsViewModel"
     },
 ];
