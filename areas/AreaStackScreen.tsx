@@ -6,6 +6,7 @@ import OtsuNewsViewModel from '../otsu/OtsuNewsViewModel';
 import MaibaraNewsViewModel from '../maibara/MaibaraNewsViewModel';
 import KusatsuNewsViewModel from '../kusatsu/KusatsuNewsViewModel';
 import RittoNewsViewModel from '../ritto/RittoNewsViewModel';
+import YasuNewsViewModel from '../yasu/YasuNewsViewModel';
 import WebViewScreen from '../common/WebViewScreen';
 
 const Stack = createStackNavigator();
@@ -37,6 +38,11 @@ export default function areaStackScreen() {
           name='RittoNewsViewModel'
           component={RittoNewsViewModel}
           options={{headerTitle: '栗東市の情報'}}
+        />
+        <Stack.Screen
+          name='YasuNewsViewModel'
+          component={YasuNewsViewModel}
+          options={{headerTitle: '野洲市の情報'}}
         />
         <Stack.Screen
           name='WebViewScreen'
