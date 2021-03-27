@@ -1,5 +1,5 @@
 import React from 'react';
-import NewsScreen from './MaibaraNewsScreen';
+import NewsScreen from '../common/NewsScreen';
 import MaibaraNewsModel from './MaibaraNewsModel';
 import {convertToViewData} from './MaibaraNewsViewData';
 

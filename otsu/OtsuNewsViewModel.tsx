@@ -1,5 +1,5 @@
 import React from 'react';
-import OtsuNewsScreen from './OtsuNewsScreen';
+import NewsScreen from '../common/NewsScreen';
 import OtsuNewsModel from './OtsuNewsModel';
 import {convertToViewData} from './OtsuNewsViewData';
 
@@ -32,7 +32,7 @@ export default class OtsuNewsViewModel extends React.Component<Props, State> {
     render() {
         const viewData = this.state.news;
         return(
-            <OtsuNewsScreen news={viewData}/>
+            <NewsScreen news={viewData}/>
         );
     }
 }

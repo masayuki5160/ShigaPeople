@@ -1,5 +1,5 @@
 import React from 'react';
-import NewsScreen from './YasuNewsScreen';
+import NewsScreen from '../common/NewsScreen';
 import NewsModel from './YasuNewsModel';
 import {convertToViewData} from './YasuNewsViewData';
 

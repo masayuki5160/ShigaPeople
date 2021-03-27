@@ -3,7 +3,7 @@ import {View, Text, StyleSheet, FlatList} from 'react-native';
 import { List } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/core';
 
-export default function KusatsuNewsScreen(props: any) {
+export default function NewsScreen(props: any) {
     const navigation = useNavigation();
     return (
         <View style={styles.container}>

@@ -1,5 +1,5 @@
 import React from 'react';
-import NewsScreen from './KusatsuNewsScreen';
+import NewsScreen from '../common/NewsScreen';
 import NewsModel from './KusatsuNewsModel';
 import {convertToViewData} from './KusatsuNewsViewData';
 

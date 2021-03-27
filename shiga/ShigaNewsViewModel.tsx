@@ -1,5 +1,5 @@
 import React from 'react';
-import ShigaNewsScreen from './ShigaNewsScreen';
+import NewsScreen from '../common/NewsScreen';
 import ShigaNewsModel from './ShigaNewsModel';
 import {convertToViewData} from './ShigaNewsViewData';
 
@@ -32,7 +32,7 @@ export default class ShigaNewsViewModel extends React.Component<Props, State> {
     render() {
         const viewData = this.state.news;
         return(
-            <ShigaNewsScreen news={viewData}/>
+            <NewsScreen news={viewData}/>
         );
     }
 }

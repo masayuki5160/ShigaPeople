@@ -1,5 +1,5 @@
 import React from 'react';
-import NewsScreen from './RittoNewsScreen';
+import NewsScreen from '../common/NewsScreen';
 import NewsModel from './RittoNewsModel';
 import {convertToViewData} from './RittoNewsViewData';
 
