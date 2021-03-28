@@ -28,4 +28,7 @@ $ expo build:android
 ```
 # Check TypeScript Syntax
 $ npx tsc
+
+# Run Unit Test
+$ npm test
 ```
