@@ -2,7 +2,7 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { StyleSheet, SafeAreaView } from 'react-native';
-import { AntDesign, Feather } from '@expo/vector-icons';
+import { MaterialCommunityIcons } from '@expo/vector-icons'; 
 // import Screens
 import AreaStackScreen from './areas/AreaStackScreen';
 import ShigaStackScreen from './shiga/ShigaStackScreen';
@@ -19,7 +19,7 @@ export default function TabNavigator() {
             component={ShigaStackScreen}
             options={{
               tabBarIcon: ({ color, size }) => (
-                <AntDesign name="infocirlceo" size={24} color="black" />
+                <MaterialCommunityIcons name="information-outline" size={24} color="black" />
               ),
             }}
           />
@@ -28,7 +28,7 @@ export default function TabNavigator() {
             component={AreaStackScreen}
             options={{
               tabBarIcon: ({ color, size }) => (
-                <Feather name="list" size={24} color="black" />
+                <MaterialCommunityIcons name="format-list-bulleted" size={24} color="black" />
               ),
             }}
           />
