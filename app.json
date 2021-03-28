@@ -22,7 +22,7 @@
       "buildNumber": "4"
     },
     "android": {
-      "versionCode": 4,
+      "versionCode": 5,
       "package": "com.masaytan.shigapeople",
       "permissions": [
       ],
