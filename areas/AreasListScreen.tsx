@@ -16,6 +16,7 @@ export default function AreasListScreen() {
                     <View>
                         <List.Item 
                             title={item.name}
+                            description={item.area}
                             onPress={() => {navigation.navigate(item.screen)}}
                         />
                         <Divider/>
