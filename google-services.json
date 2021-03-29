@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "221148624739",
+    "project_id": "shiga-people",
+    "storage_bucket": "shiga-people.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:221148624739:android:d67e8d4e587817b472c556",
+        "android_client_info": {
+          "package_name": "com.masaytan.shigapeople"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "221148624739-5gbeoavn2kd4k4vbuebb3hivhonbr0n4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdp5_p0_DMM-xhVmyjIlfNXgaifbXLgrw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "221148624739-5gbeoavn2kd4k4vbuebb3hivhonbr0n4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
