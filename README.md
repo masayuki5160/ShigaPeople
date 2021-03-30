@@ -3,24 +3,23 @@
 ## How to build
 
 ```
-# Install expo cli
-$ npm install expo -g expo-cli
+# iOS
+npm run ios
 
-# Start Expo Server and use QR code with Expo Go App
-$ npm start
+# Android
+npm run android
 ```
 
 ## Archive for Submission
 
-```
-# Check expo account
-$ expo whoami
+TBD
 
+```
 # App Store
-$ expo build:ios
+$ 
 
 # Google Play
-$ expo build:android
+$ 
 ```
 
 ## Others
