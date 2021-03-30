@@ -49,6 +49,6 @@
     "jest": "~25.2.6"
   },
   "private": true,
-  "name": "Shiga",
+  "name": "shiga",
   "version": "1.0.0"
 }
