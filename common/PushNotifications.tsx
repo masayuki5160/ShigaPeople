@@ -11,10 +11,18 @@ export async function requestUserPermission() {
   }
 }
 
-export async function subscribe(topic: string) {
+export function subscribe(topic: string) {
   messaging()
   .subscribeToTopic(topic)
   .then(() => {
     console.log('Subscribed to topic!')
+  });
+}
+
+export function unsubscribe(topic: string) {
+  messaging()
+  .unsubscribeFromTopic(topic)
+  .then(() => {
+    console.log('Unsubscribed fom the topic!')
   });
 }
