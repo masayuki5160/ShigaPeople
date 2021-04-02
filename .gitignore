@@ -8,6 +8,8 @@ npm-debug.*
 *.mobileprovision
 *.orig.*
 web-build/
+ios/GoogleService-Info.plist
+android/app/google-services.json
 
 # macOS
 .DS_Store

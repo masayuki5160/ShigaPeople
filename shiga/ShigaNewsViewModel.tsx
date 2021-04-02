@@ -2,6 +2,7 @@ import React from 'react';
 import NewsScreen from '../common/NewsScreen';
 import ShigaNewsModel from './ShigaNewsModel';
 import {convertToViewData} from './ShigaNewsViewData';
+import {requestUserPermission, subscribe} from '../common/PushNotifications';
 
 export interface Props {
     news: {}
@@ -20,6 +21,9 @@ export default class ShigaNewsViewModel extends React.Component<Props, State> {
     }
 
     async componentDidMount() {
+        // Get pushNotification permission
+        requestUserPermission();
+
         const model = new ShigaNewsModel()
         const news = await model.fetchRss();
         const viewData = convertToViewData(news);
