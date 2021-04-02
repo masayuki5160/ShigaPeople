@@ -10,3 +10,11 @@ export async function requestUserPermission() {
     console.log('Authorization status:', authStatus);
   }
 }
+
+export async function subscribe(topic: string) {
+  messaging()
+  .subscribeToTopic(topic)
+  .then(() => {
+    console.log('Subscribed to topic!')
+  });
+}
