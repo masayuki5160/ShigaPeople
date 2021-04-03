@@ -1,10 +1,12 @@
 export const options = [
     {
-        name: "大津市",
+        name: "プッシュ通知",
+        icon: "bullhorn-outline",
         screen: "OtsuNewsViewModel"
     },
     {
-        name: "草津市",
+        name: "GitHub",
+        icon: "github",
         screen: "KusatsuNewsViewModel"
     },
 ];

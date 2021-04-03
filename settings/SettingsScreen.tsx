@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, StyleSheet, FlatList} from 'react-native';
-import { List, Divider, Text } from 'react-native-paper';
+import { List, Divider } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/core';
 
 export default function SettingsScreen(props: any) {
@@ -16,6 +16,7 @@ export default function SettingsScreen(props: any) {
                         <List.Item 
                             title={item.name}
                             description=""
+                            left={props => <List.Icon {...props} icon={item.icon} />}
                             onPress={() => {
                                 navigation.navigate(item.screen);
                             }}
