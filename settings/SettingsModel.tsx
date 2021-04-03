@@ -2,7 +2,7 @@ export const options = [
     {
         name: "プッシュ通知",
         icon: "bullhorn-outline",
-        screen: "OtsuNewsViewModel"
+        screen: "NotificationsViewModel"
     },
     {
         name: "GitHub",
