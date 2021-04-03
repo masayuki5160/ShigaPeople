@@ -1,6 +1,6 @@
 import React from 'react';
 import Screen from './NotificationsScreen';
-import {areas} from './NotificationsModel';
+import {fetch} from './NotificationsModel';
 
 export interface Props {
     areas: {}
@@ -19,7 +19,7 @@ export default class NotificationsViewModel extends React.Component<Props, State
     }
 
     async componentDidMount() {
-        const viewData = areas;
+        const viewData = await fetch();
         this.setState({areas: viewData});
     }
 

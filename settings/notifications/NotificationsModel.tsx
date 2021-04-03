@@ -1,17 +1,19 @@
-export const areas = [
+import {fetchData, storeData} from '../../common/LocalStorage';
+
+const areas = [
     {
         name: "滋賀県",
-        topic: "",
+        topic: "shiga",
         subscribe: true// 滋賀県の情報はデフォルトで取得する
     },
     {
         name: "大津市",
-        topic: "",
+        topic: "otsu",
         subscribe: false
     },
     {
         name: "草津市",
-        topic: "",
+        topic: "kusatsu",
         subscribe: false
     },
     {
@@ -21,17 +23,17 @@ export const areas = [
     },
     {
         name: "栗東市",
-        topic: "",
+        topic: "ritto",
         subscribe: false
     },
     {
         name: "野洲市",
-        topic: "",
+        topic: "yasu",
         subscribe: false
     },
     {
         name: "甲賀市",
-        topic: "",
+        topic: "koka",
         subscribe: false
     },
     {
@@ -41,7 +43,7 @@ export const areas = [
     },
     {
         name: "東近江市",
-        topic: "",
+        topic: "higashiomi",
         subscribe: false
     },
     {
@@ -51,7 +53,7 @@ export const areas = [
     },
     {
         name: "日野町",
-        topic: "",
+        topic: "hino",
         subscribe: false
     },
     {
@@ -71,32 +73,56 @@ export const areas = [
     },
     {
         name: "豊郷町",
-        topic: "",
+        topic: "toyosato",
         subscribe: false
     },
     {
         name: "甲良町",
-        topic: "",
+        topic: "koura",
         subscribe: false
     },
     {
         name: "多賀町",
-        topic: "",
+        topic: "taga",
         subscribe: false
     },
     {
         name: "米原市",
-        topic: "",
+        topic: "maibara",
         subscribe: false
     },
     {
         name: "長浜市",
-        topic: "",
+        topic: "nagahama",
         subscribe: false
     },
     {
         name: "高島市",
-        topic: "",
+        topic: "takashima",
         subscribe: false
     },
 ];
+
+// TODO: Add unit test
+export async function fetch() {
+    const settings = areas.map(async function(item){
+        let res = item;
+        if (res.topic == '') {
+            return res;
+        }
+
+        const fetchedData = await fetchData(item.topic);
+        if (fetchedData != '') {
+            const subscribe = (fetchedData == 'true') ? true : false;
+            res.subscribe = subscribe;
+        } else {
+            // Store the init value
+            await storeData(item.topic, item.subscribe.toString());
+        }
+
+        return res;
+    });
+
+    let ret = await Promise.all(settings);
+    return ret;
+}
