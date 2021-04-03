@@ -2,31 +2,19 @@ import React from 'react';
 import Screen from './SettingsScreen';
 import {options} from './SettingsModel';
 
-export interface Props {
-    news: {}
-}
-  
-interface State {
-    news: {}
-}
-
-export default class SettingsViewModel extends React.Component<Props, State> {
+export default class SettingsViewModel extends React.Component {
     constructor(props: any) {
         super(props);
-        this.state = {
-            news: {},
-        };
     }
 
     async componentDidMount() {
-        this.setState({news: options});
     }
 
     componentWillUnmount() {
     }
 
     render() {
-        const viewData = this.state.news;
+        const viewData = options;
         return(
             <Screen options={viewData}/>
         );
