@@ -10,7 +10,7 @@ interface State {
     news: {}
 }
 
-export default class RittoNewsViewModel extends React.Component<Props, State> {
+export default class SettingsViewModel extends React.Component<Props, State> {
     constructor(props: any) {
         super(props);
         this.state = {

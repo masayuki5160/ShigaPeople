@@ -1,17 +1,17 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 // import Screens
-import SettingScreen from './SettingsScreen';
+import SettingViewModel from './SettingsViewModel';
 import OtsuNewsViewModel from '../otsu/OtsuNewsViewModel';
 
 const Stack = createStackNavigator();
 
 export default function SettingsStackScreen() {
     return(
-      <Stack.Navigator initialRouteName='SettingScreen'>
+      <Stack.Navigator initialRouteName='SettingViewModel'>
         <Stack.Screen
-          name='SettingScreen'
-          component={SettingScreen}
+          name='SettingViewModel'
+          component={SettingViewModel}
           options={{headerTitle: '設定'}}
         />
         <Stack.Screen
