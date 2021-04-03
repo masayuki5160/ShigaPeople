@@ -6,6 +6,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 // import Screens
 import AreaStackScreen from './areas/AreaStackScreen';
 import ShigaStackScreen from './shiga/ShigaStackScreen';
+import SettingsScreen from './settings/SettingsStackScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -29,6 +30,15 @@ export default function TabNavigator() {
             options={{
               tabBarIcon: ({ color, size }) => (
                 <MaterialCommunityIcons name="format-list-bulleted" size={24} color="black" />
+              ),
+            }}
+          />
+          <Tab.Screen 
+            name="設定"
+            component={SettingsScreen}
+            options={{
+              tabBarIcon: ({ color, size }) => (
+                <MaterialCommunityIcons name="cog-outline" size={24} color="black" />
               ),
             }}
           />

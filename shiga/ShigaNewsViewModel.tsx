@@ -23,6 +23,8 @@ export default class ShigaNewsViewModel extends React.Component<Props, State> {
     async componentDidMount() {
         // Get pushNotification permission
         requestUserPermission();
+        // TODO: fix later
+        subscribe('shiga');
 
         const model = new ShigaNewsModel()
         const news = await model.fetchRss();
