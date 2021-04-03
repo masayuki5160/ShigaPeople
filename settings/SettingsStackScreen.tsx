@@ -4,6 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import SettingViewModel from './SettingsViewModel';
 import OtsuNewsViewModel from '../otsu/OtsuNewsViewModel';
 import NotificationsViewModel from './notifications/NotificationsViewModel';
+import GithubScreen from './github/GithubScreen';
 
 const Stack = createStackNavigator();
 
@@ -24,6 +25,11 @@ export default function SettingsStackScreen() {
           name='NotificationsViewModel'
           component={NotificationsViewModel}
           options={{headerTitle: 'プッシュ通知設定'}}
+        />
+        <Stack.Screen
+          name='GithubScreen'
+          component={GithubScreen}
+          options={{headerTitle: 'GitHub'}}
         />
       </Stack.Navigator>
     );

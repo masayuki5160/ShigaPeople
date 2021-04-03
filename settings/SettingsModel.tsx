@@ -7,6 +7,6 @@ export const options = [
     {
         name: "GitHub",
         icon: "github",
-        screen: "KusatsuNewsViewModel"
+        screen: "GithubScreen"
     },
 ];
