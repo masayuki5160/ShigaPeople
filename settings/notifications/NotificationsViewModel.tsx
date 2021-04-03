@@ -1,6 +1,7 @@
 import React from 'react';
 import Screen from './NotificationsScreen';
-import {fetch} from './NotificationsModel';
+import {fetch, fetchRow, storeSubscribeData} from './NotificationsModel';
+import {subscribe, unsubscribe} from '../../common/PushNotifications';
 
 export interface Props {
     areas: {}
@@ -32,4 +33,18 @@ export default class NotificationsViewModel extends React.Component<Props, State
             <Screen areas={viewData}/>
         );
     }
+}
+
+export async function onToggleSwitch(key: string) {
+    const subscribeStatus = await fetchRow(key);
+    if (subscribeStatus) {
+        unsubscribe(key);
+        storeSubscribeData(key, false);
+    } else {
+        subscribe(key);
+        storeSubscribeData(key, true);            
+    }
+
+    // const viewData = await fetch();
+    // this.setState({areas: viewData});
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import {View, StyleSheet, FlatList, Text} from 'react-native';
 import { List, Divider, Switch } from 'react-native-paper';
+import {onToggleSwitch} from './NotificationsViewModel';
 
 export default function NotificationsScreen(props: any) {
     return (
@@ -14,7 +15,7 @@ export default function NotificationsScreen(props: any) {
                         <List.Item 
                             title={item.name}
                             description=""
-                            right={props => <Switch value={item.subscribe} onValueChange={onToggleSwitch} />}
+                            right={props => <Switch value={item.subscribe} onValueChange={() => onToggleSwitch(item.topic)} />}
                         />
                         <Divider />
                     </View>
@@ -23,9 +24,6 @@ export default function NotificationsScreen(props: any) {
         </View>
     );
 }
-
-// TODO: ViewModel側に処理を実装する
-const onToggleSwitch = () => {};
 
 const styles = StyleSheet.create({
     container: {

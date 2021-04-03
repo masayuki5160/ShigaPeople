@@ -1,6 +1,12 @@
 import {fetchData, storeData} from '../../common/LocalStorage';
 
-const areas = [
+export interface Area {
+    name: string,
+    topic: string,
+    subscribe: boolean
+}
+
+const areas: Area[] = [
     {
         name: "滋賀県",
         topic: "shiga",
@@ -125,4 +131,13 @@ export async function fetch() {
 
     let ret = await Promise.all(settings);
     return ret;
+}
+
+export async function fetchRow(key: string) {
+    const subscribe = await fetchData(key);
+    return (subscribe == 'true') ? true : false;
+}
+
+export async function storeSubscribeData(key: string, value: boolean) {
+    await storeData(key, value.toString());
 }

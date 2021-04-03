@@ -12,7 +12,6 @@ export async function fetchData(key: string) {
     try {
         const value = await AsyncStorage.getItem(key);
         if (value !== null) {
-          console.log(value);
           return value;
         }
     } catch (error) {
