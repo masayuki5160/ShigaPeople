@@ -1,4 +1,4 @@
-import {NewsViewData} from '../common/NewsViewData';
+import {NewsViewData} from '../src/common/NewsViewData';
 
 export function convertToViewData(rawData: []) {
     const res = rawData.map((elements, index) => {
