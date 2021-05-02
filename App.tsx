@@ -4,8 +4,6 @@ import TabNavigator from './TabNavigator';
 
 export default function App() {
   return (
-    <PaperProvider>
-        <TabNavigator/>
-    </PaperProvider>
+    <TabNavigator/>
   );
 }
