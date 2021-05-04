@@ -4,22 +4,19 @@
 
 ```
 # iOS
-npm run ios
+npx react-native run-ios
 
 # Android
-npm run android
+npx react-native run-android
 ```
 
 ## Archive for Submission
 
-TBD
-
 ```
 # App Store
-$ 
+## Archive ShigaPeople in Xcode.
 
 # Google Play
-$ 
 ```
 
 ## Others
