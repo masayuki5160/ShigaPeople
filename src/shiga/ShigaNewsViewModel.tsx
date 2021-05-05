@@ -1,44 +1,41 @@
 import React from 'react';
 import NewsScreen from '../common/NewsScreen';
 import ShigaNewsModel from './ShigaNewsModel';
-import {convertToViewData} from './ShigaNewsViewData';
-import {requestUserPermission, subscribe} from '../common/PushNotifications';
+import { convertToViewData } from './ShigaNewsViewData';
+import { requestUserPermission, subscribe } from '../common/PushNotifications';
 
 export interface Props {
-    news: {}
+  news: {};
 }
-  
+
 interface State {
-    news: {}
+  news: {};
 }
 
 export default class ShigaNewsViewModel extends React.Component<Props, State> {
-    constructor(props: any) {
-        super(props);
-        this.state = {
-            news: {},
-        };
-    }
+  constructor(props: any) {
+    super(props);
+    this.state = {
+      news: {},
+    };
+  }
 
-    async componentDidMount() {
-        // Get pushNotification permission
-        requestUserPermission();
-        // TODO: fix later
-        subscribe('shiga');
+  async componentDidMount() {
+    // Get pushNotification permission
+    requestUserPermission();
+    // TODO: fix later
+    subscribe('shiga');
 
-        const model = new ShigaNewsModel()
-        const news = await model.fetchRss();
-        const viewData = convertToViewData(news);
-        this.setState({news: viewData});
-    }
+    const model = new ShigaNewsModel();
+    const news = await model.fetchRss();
+    const viewData = convertToViewData(news);
+    this.setState({ news: viewData });
+  }
 
-    componentWillUnmount() {
-    }
+  componentWillUnmount() {}
 
-    render() {
-        const viewData = this.state.news;
-        return(
-            <NewsScreen news={viewData}/>
-        );
-    }
+  render() {
+    const viewData = this.state.news;
+    return <NewsScreen news={viewData} />;
+  }
 }

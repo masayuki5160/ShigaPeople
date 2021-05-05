@@ -9,28 +9,28 @@ import GithubScreen from './github/GithubScreen';
 const Stack = createStackNavigator();
 
 export default function SettingsStackScreen() {
-    return(
-      <Stack.Navigator initialRouteName='SettingViewModel'>
-        <Stack.Screen
-          name='SettingViewModel'
-          component={SettingViewModel}
-          options={{headerTitle: '設定'}}
-        />
-        <Stack.Screen
-          name='OtsuNewsViewModel'
-          component={OtsuNewsViewModel}
-          options={{headerTitle: '大津市の情報'}}
-        />
-        <Stack.Screen
-          name='NotificationsViewModel'
-          component={NotificationsViewModel}
-          options={{headerTitle: 'プッシュ通知設定'}}
-        />
-        <Stack.Screen
-          name='GithubScreen'
-          component={GithubScreen}
-          options={{headerTitle: 'GitHub'}}
-        />
-      </Stack.Navigator>
-    );
-  }
+  return (
+    <Stack.Navigator initialRouteName="SettingViewModel">
+      <Stack.Screen
+        name="SettingViewModel"
+        component={SettingViewModel}
+        options={{ headerTitle: '設定' }}
+      />
+      <Stack.Screen
+        name="OtsuNewsViewModel"
+        component={OtsuNewsViewModel}
+        options={{ headerTitle: '大津市の情報' }}
+      />
+      <Stack.Screen
+        name="NotificationsViewModel"
+        component={NotificationsViewModel}
+        options={{ headerTitle: 'プッシュ通知設定' }}
+      />
+      <Stack.Screen
+        name="GithubScreen"
+        component={GithubScreen}
+        options={{ headerTitle: 'GitHub' }}
+      />
+    </Stack.Navigator>
+  );
+}

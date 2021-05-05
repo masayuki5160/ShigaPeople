@@ -9,18 +9,14 @@ const Stack = createStackNavigator();
 const headerTitleName = '滋賀県の情報';
 
 export default function ShigaStackScreen() {
-    return(
-        <Stack.Navigator initialRouteName='ShigaNewsViewModel'>
-            <Stack.Screen
-                name='ShigaNewsViewModel'
-                component={ShigaNewsViewModel}
-                options={{headerTitle: headerTitleName}}
-            />
-            <Stack.Screen
-                name='WebViewScreen'
-                component={WebViewScreen}
-                options={{headerTitle: ''}}
-            />
-        </Stack.Navigator>
-    );
+  return (
+    <Stack.Navigator initialRouteName="ShigaNewsViewModel">
+      <Stack.Screen
+        name="ShigaNewsViewModel"
+        component={ShigaNewsViewModel}
+        options={{ headerTitle: headerTitleName }}
+      />
+      <Stack.Screen name="WebViewScreen" component={WebViewScreen} options={{ headerTitle: '' }} />
+    </Stack.Navigator>
+  );
 }

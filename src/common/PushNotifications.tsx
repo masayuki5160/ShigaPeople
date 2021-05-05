@@ -13,16 +13,16 @@ export async function requestUserPermission() {
 
 export function subscribe(topic: string) {
   messaging()
-  .subscribeToTopic(topic)
-  .then(() => {
-    console.log('Subscribed to topic!')
-  });
+    .subscribeToTopic(topic)
+    .then(() => {
+      console.log('Subscribed to topic!');
+    });
 }
 
 export function unsubscribe(topic: string) {
   messaging()
-  .unsubscribeFromTopic(topic)
-  .then(() => {
-    console.log('Unsubscribed fom the topic!')
-  });
+    .unsubscribeFromTopic(topic)
+    .then(() => {
+      console.log('Unsubscribed fom the topic!');
+    });
 }

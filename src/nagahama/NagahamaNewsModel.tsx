@@ -2,18 +2,18 @@ import { parse } from 'fast-xml-parser';
 import { RssModel } from '../common/RssModel';
 
 export default class NagahamaNewsModel implements RssModel {
-    rssUrl = 'https://www.city.nagahama.lg.jp/rss/rss_new.xml';
+  rssUrl = 'https://www.city.nagahama.lg.jp/rss/rss_new.xml';
 
-    async fetchRss() {
-        const response = await fetch(this.rssUrl);
-        if (response.status !== 200) {
-            return [];
-        }
-        
-        const responceText = await response.text();
-        const obj = parse(responceText);
-        const res = obj['rss']['channel']['item']
-
-        return res;
+  async fetchRss() {
+    const response = await fetch(this.rssUrl);
+    if (response.status !== 200) {
+      return [];
     }
+
+    const responceText = await response.text();
+    const obj = parse(responceText);
+    const res = obj.rss.channel.item;
+
+    return res;
+  }
 }

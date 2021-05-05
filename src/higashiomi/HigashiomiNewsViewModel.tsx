@@ -1,38 +1,35 @@
 import React from 'react';
 import NewsScreen from '../common/NewsScreen';
 import NewsModel from './HigashiomiNewsModel';
-import {convertToViewData} from './HigashiomiNewsViewData';
+import { convertToViewData } from './HigashiomiNewsViewData';
 
 export interface Props {
-    news: {}
+  news: {};
 }
-  
+
 interface State {
-    news: {}
+  news: {};
 }
 
 export default class HigashiomiNewsViewModel extends React.Component<Props, State> {
-    constructor(props: any) {
-        super(props);
-        this.state = {
-            news: {},
-        };
-    }
+  constructor(props: any) {
+    super(props);
+    this.state = {
+      news: {},
+    };
+  }
 
-    async componentDidMount() {
-        const model = new NewsModel()
-        const news = await model.fetchRss();
-        const viewData = convertToViewData(news);
-        this.setState({news: viewData});
-    }
+  async componentDidMount() {
+    const model = new NewsModel();
+    const news = await model.fetchRss();
+    const viewData = convertToViewData(news);
+    this.setState({ news: viewData });
+  }
 
-    componentWillUnmount() {
-    }
+  componentWillUnmount() {}
 
-    render() {
-        const viewData = this.state.news;
-        return(
-            <NewsScreen news={viewData}/>
-        );
-    }
+  render() {
+    const viewData = this.state.news;
+    return <NewsScreen news={viewData} />;
+  }
 }
