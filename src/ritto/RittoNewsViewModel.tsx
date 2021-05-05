@@ -1,38 +1,35 @@
-import React from 'react'
-import NewsScreen from '../common/NewsScreen'
-import NewsModel from './RittoNewsModel'
-import { convertToViewData } from './RittoNewsViewData'
+import React from 'react';
+import NewsScreen from '../common/NewsScreen';
+import NewsModel from './RittoNewsModel';
+import { convertToViewData } from './RittoNewsViewData';
 
 export interface Props {
-    news: {}
+  news: {};
 }
 
 interface State {
-    news: {}
+  news: {};
 }
 
 export default class RittoNewsViewModel extends React.Component<Props, State> {
-  constructor (props: any) {
-    super(props)
+  constructor(props: any) {
+    super(props);
     this.state = {
-      news: {}
-    }
+      news: {},
+    };
   }
 
-  async componentDidMount () {
-    const model = new NewsModel()
-    const news = await model.fetchRss()
-    const viewData = convertToViewData(news)
-    this.setState({ news: viewData })
+  async componentDidMount() {
+    const model = new NewsModel();
+    const news = await model.fetchRss();
+    const viewData = convertToViewData(news);
+    this.setState({ news: viewData });
   }
 
-  componentWillUnmount () {
-  }
+  componentWillUnmount() {}
 
-  render () {
-    const viewData = this.state.news
-    return (
-            <NewsScreen news={viewData}/>
-    )
+  render() {
+    const viewData = this.state.news;
+    return <NewsScreen news={viewData} />;
   }
 }

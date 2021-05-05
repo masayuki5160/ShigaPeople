@@ -3,114 +3,114 @@ export const areas = [
     name: '大津市',
     area: '大津地域',
     icon: 'newspaper-variant-outline',
-    screen: 'OtsuNewsViewModel'
+    screen: 'OtsuNewsViewModel',
   },
   {
     name: '草津市',
     area: '南部地域',
     icon: 'newspaper-variant-outline',
-    screen: 'KusatsuNewsViewModel'
+    screen: 'KusatsuNewsViewModel',
   },
   {
     name: '守山市',
     area: '南部地域',
     icon: 'alert-outline',
-    screen: ''
+    screen: '',
   },
   {
     name: '栗東市',
     area: '南部地域',
     icon: 'newspaper-variant-outline',
-    screen: 'RittoNewsViewModel'
+    screen: 'RittoNewsViewModel',
   },
   {
     name: '野洲市',
     area: '南部地域',
     icon: 'newspaper-variant-outline',
-    screen: 'YasuNewsViewModel'
+    screen: 'YasuNewsViewModel',
   },
   {
     name: '甲賀市',
     area: '甲賀地域',
     icon: 'newspaper-variant-outline',
-    screen: 'KokaNewsViewModel'
+    screen: 'KokaNewsViewModel',
   },
   {
     name: '湖南市',
     area: '甲賀地域',
     icon: 'alert-outline',
-    screen: ''
+    screen: '',
   },
   {
     name: '東近江市',
     area: '東近江地域',
     icon: 'newspaper-variant-outline',
-    screen: 'HigashiomiNewsViewModel'
+    screen: 'HigashiomiNewsViewModel',
   },
   {
     name: '近江八幡市',
     area: '東近江地域',
     icon: 'alert-outline',
-    screen: ''
+    screen: '',
   },
   {
     name: '日野町',
     area: '東近江地域',
     icon: 'newspaper-variant-outline',
-    screen: 'HinoNewsViewModel'
+    screen: 'HinoNewsViewModel',
   },
   {
     name: '竜王町',
     area: '東近江地域',
     icon: 'alert-outline',
-    screen: ''
+    screen: '',
   },
   {
     name: '彦根町',
     area: '湖東地域',
     icon: 'alert-outline',
-    screen: ''
+    screen: '',
   },
   {
     name: '愛荘町',
     area: '湖東地域',
     icon: 'alert-outline',
-    screen: ''
+    screen: '',
   },
   {
     name: '豊郷町',
     area: '湖東地域',
     icon: 'newspaper-variant-outline',
-    screen: 'ToyosatoNewsViewModel'
+    screen: 'ToyosatoNewsViewModel',
   },
   {
     name: '甲良町',
     area: '湖東地域',
     icon: 'newspaper-variant-outline',
-    screen: 'KouraNewsViewModel'
+    screen: 'KouraNewsViewModel',
   },
   {
     name: '多賀町',
     area: '湖東地域',
     icon: 'newspaper-variant-outline',
-    screen: 'TagaNewsViewModel'
+    screen: 'TagaNewsViewModel',
   },
   {
     name: '米原市',
     area: '湖北地域',
     icon: 'newspaper-variant-outline',
-    screen: 'MaibaraNewsViewModel'
+    screen: 'MaibaraNewsViewModel',
   },
   {
     name: '長浜市',
     area: '湖北地域',
     icon: 'newspaper-variant-outline',
-    screen: 'NagahamaNewsViewModel'
+    screen: 'NagahamaNewsViewModel',
   },
   {
     name: '高島市',
     area: '高島地域',
     icon: 'newspaper-variant-outline',
-    screen: 'TakashimaNewsViewModel'
-  }
-]
+    screen: 'TakashimaNewsViewModel',
+  },
+];

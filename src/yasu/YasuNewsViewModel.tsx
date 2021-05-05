@@ -1,38 +1,35 @@
-import React from 'react'
-import NewsScreen from '../common/NewsScreen'
-import NewsModel from './YasuNewsModel'
-import { convertToViewData } from './YasuNewsViewData'
+import React from 'react';
+import NewsScreen from '../common/NewsScreen';
+import NewsModel from './YasuNewsModel';
+import { convertToViewData } from './YasuNewsViewData';
 
 export interface Props {
-    news: {}
+  news: {};
 }
 
 interface State {
-    news: {}
+  news: {};
 }
 
 export default class YasuNewsViewModel extends React.Component<Props, State> {
-  constructor (props: any) {
-    super(props)
+  constructor(props: any) {
+    super(props);
     this.state = {
-      news: {}
-    }
+      news: {},
+    };
   }
 
-  async componentDidMount () {
-    const model = new NewsModel()
-    const news = await model.fetchRss()
-    const viewData = convertToViewData(news)
-    this.setState({ news: viewData })
+  async componentDidMount() {
+    const model = new NewsModel();
+    const news = await model.fetchRss();
+    const viewData = convertToViewData(news);
+    this.setState({ news: viewData });
   }
 
-  componentWillUnmount () {
-  }
+  componentWillUnmount() {}
 
-  render () {
-    const viewData = this.state.news
-    return (
-            <NewsScreen news={viewData}/>
-    )
+  render() {
+    const viewData = this.state.news;
+    return <NewsScreen news={viewData} />;
   }
 }
