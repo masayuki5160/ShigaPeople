@@ -1,28 +1,28 @@
-import messaging from '@react-native-firebase/messaging';
+import messaging from '@react-native-firebase/messaging'
 
-export async function requestUserPermission() {
-  const authStatus = await messaging().requestPermission();
+export async function requestUserPermission () {
+  const authStatus = await messaging().requestPermission()
   const enabled =
     authStatus === messaging.AuthorizationStatus.AUTHORIZED ||
-    authStatus === messaging.AuthorizationStatus.PROVISIONAL;
+    authStatus === messaging.AuthorizationStatus.PROVISIONAL
 
   if (enabled) {
-    console.log('Authorization status:', authStatus);
+    console.log('Authorization status:', authStatus)
   }
 }
 
-export function subscribe(topic: string) {
+export function subscribe (topic: string) {
   messaging()
-  .subscribeToTopic(topic)
-  .then(() => {
-    console.log('Subscribed to topic!')
-  });
+    .subscribeToTopic(topic)
+    .then(() => {
+      console.log('Subscribed to topic!')
+    })
 }
 
-export function unsubscribe(topic: string) {
+export function unsubscribe (topic: string) {
   messaging()
-  .unsubscribeFromTopic(topic)
-  .then(() => {
-    console.log('Unsubscribed fom the topic!')
-  });
+    .unsubscribeFromTopic(topic)
+    .then(() => {
+      console.log('Unsubscribed fom the topic!')
+    })
 }

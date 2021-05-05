@@ -1,38 +1,38 @@
-import React from 'react';
-import NewsScreen from '../common/NewsScreen';
-import NewsModel from './NagahamaNewsModel';
-import {convertToViewData} from './NagahamaNewsViewData';
+import React from 'react'
+import NewsScreen from '../common/NewsScreen'
+import NewsModel from './NagahamaNewsModel'
+import { convertToViewData } from './NagahamaNewsViewData'
 
 export interface Props {
     news: {}
 }
-  
+
 interface State {
     news: {}
 }
 
 export default class NagahamaNewsViewModel extends React.Component<Props, State> {
-    constructor(props: any) {
-        super(props);
-        this.state = {
-            news: {},
-        };
+  constructor (props: any) {
+    super(props)
+    this.state = {
+      news: {}
     }
+  }
 
-    async componentDidMount() {
-        const model = new NewsModel()
-        const news = await model.fetchRss();
-        const viewData = convertToViewData(news);
-        this.setState({news: viewData});
-    }
+  async componentDidMount () {
+    const model = new NewsModel()
+    const news = await model.fetchRss()
+    const viewData = convertToViewData(news)
+    this.setState({ news: viewData })
+  }
 
-    componentWillUnmount() {
-    }
+  componentWillUnmount () {
+  }
 
-    render() {
-        const viewData = this.state.news;
-        return(
+  render () {
+    const viewData = this.state.news
+    return (
             <NewsScreen news={viewData}/>
-        );
-    }
+    )
+  }
 }
