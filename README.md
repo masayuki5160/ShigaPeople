@@ -17,6 +17,8 @@ npx react-native run-android
 ## Archive ShigaPeople in Xcode.
 
 # Google Play
+$ cd android
+$ ./gradlew bundleRelease
 ```
 
 ## Others
