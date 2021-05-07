@@ -1,5 +1,8 @@
 # ShigaPeople
 
+- AppStore
+- [Google Play](https://play.google.com/store/apps/details?id=com.masaytan.shigapeople)
+
 ## How to build
 
 ```
