@@ -2,19 +2,19 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 // import Screens
 import AreasListScreen from './AreasListScreen';
-import OtsuNewsViewModel from '../otsu/OtsuNewsViewModel';
-import MaibaraNewsViewModel from '../maibara/MaibaraNewsViewModel';
-import KusatsuNewsViewModel from '../kusatsu/KusatsuNewsViewModel';
-import RittoNewsViewModel from '../ritto/RittoNewsViewModel';
-import YasuNewsViewModel from '../yasu/YasuNewsViewModel';
-import KokaNewsViewModel from '../koka/KokaNewsViewModel';
-import HigashiomiNewsViewModel from '../higashiomi/HigashiomiNewsViewModel';
-import HinoNewsViewModel from '../hino/HinoNewsViewModel';
-import ToyosatoNewsViewModel from '../toyosato/ToyosatoNewsViewModel';
-import KouraNewsViewModel from '../koura/KouraNewsViewModel';
-import NagahamaNewsViewModel from '../nagahama/NagahamaNewsViewModel';
-import TakashimaNewsViewModel from '../takashima/TakashimaNewsViewModel';
-import TagaNewsViewModel from '../taga/TagaNewsViewModel';
+import OtsuNewsViewModel from '../otsu';
+import MaibaraNewsViewModel from '../maibara';
+import KusatsuNewsViewModel from '../kusatsu';
+import RittoNewsViewModel from '../ritto';
+import YasuNewsViewModel from '../yasu';
+import KokaNewsViewModel from '../koka';
+import HigashiomiNewsViewModel from '../higashiomi';
+import HinoNewsViewModel from '../hino';
+import ToyosatoNewsViewModel from '../toyosato';
+import KouraNewsViewModel from '../koura';
+import NagahamaNewsViewModel from '../nagahama';
+import TakashimaNewsViewModel from '../takashima';
+import TagaNewsViewModel from '../taga';
 
 import WebViewScreen from '../common/WebViewScreen';
 
