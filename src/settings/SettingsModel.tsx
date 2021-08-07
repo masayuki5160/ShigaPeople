@@ -4,9 +4,4 @@ export const options = [
     icon: 'bullhorn-outline',
     screen: 'NotificationsViewModel',
   },
-  {
-    name: 'GitHub',
-    icon: 'github',
-    screen: 'GithubScreen',
-  },
 ];
