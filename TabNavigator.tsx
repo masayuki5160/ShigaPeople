@@ -37,6 +37,11 @@ export default function TabNavigator() {
           <Tab.Screen 
             name="ゴミ捨て日"
             component={TrashDayPage}
+            options={{
+              tabBarIcon: ({ color, size }) => (
+                <MaterialCommunityIcons name="trash-can-outline" size={24} color="black" />
+              ),
+            }}
           />
           <Tab.Screen 
             name="設定"
