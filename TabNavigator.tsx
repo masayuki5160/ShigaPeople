@@ -4,9 +4,9 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { StyleSheet, SafeAreaView } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons'; 
 // import Screens
-import AreaStackScreen from './src/areas/AreaStackScreen';
-import ShigaStackScreen from './src/shiga/ShigaStackScreen';
-import SettingsScreen from './src/settings/SettingsStackScreen';
+import AreaStackScreen from './src/areas';
+import ShigaStackScreen from './src/shiga';
+import SettingsScreen from './src/settings';
 
 const Tab = createBottomTabNavigator();
 
