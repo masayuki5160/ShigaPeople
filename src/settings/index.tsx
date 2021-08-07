@@ -2,7 +2,7 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 // import Screens
 import SettingViewModel from './SettingsViewModel';
-import OtsuNewsViewModel from '../otsu/OtsuNewsViewModel';
+import OtsuNewsViewModel from '../otsu';
 import NotificationsViewModel from './notifications/NotificationsViewModel';
 import GithubScreen from './github/GithubScreen';
 
