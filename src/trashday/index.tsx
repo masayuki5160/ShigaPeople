@@ -134,8 +134,8 @@ const TrashDayAreaList = () => {
 const TrashDayPage = () => {
     const Stack = createStackNavigator();
     return (
-        <Stack.Navigator initialRouteName="ShigaNews">
-            <Stack.Screen name="ShigaNews" component={TrashDayAreaList}/>
+        <Stack.Navigator initialRouteName="TrashDayArea">
+            <Stack.Screen name="TrashDayArea" component={TrashDayAreaList}/>
             <Stack.Screen name="OtsuTrashDay" component={OtsuTrashDay}/>
       </Stack.Navigator>
     );
