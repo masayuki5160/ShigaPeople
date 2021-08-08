@@ -5,10 +5,15 @@ import { View, StyleSheet, FlatList, Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/core';
 import {GarbageSchedule} from './GarbageType';
 
-const detail = (garbage: GarbageSchedule) => {
+const detail = ({ route, navigation }) => {
+    const {garbage} = route.params;
+    console.log(garbage.burnable[0].dayOfWeek);
+
+    // TODO: ゴミ出し情報を表示
+    // TODO: プッシュ通知のサブスクライブ or ローカルプッシュ通知の登録
     return (
         <View>
-            <Text>Hello</Text>
+            <Text>{garbage.burnable[0].dayOfWeek}</Text>
         </View>
     );
 }

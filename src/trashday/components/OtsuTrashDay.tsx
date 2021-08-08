@@ -115,7 +115,7 @@ const OtsuTrashDay = () => {
                         description={item.area}
                         left={(props) => <List.Icon {...props} icon="newspaper-variant-outline" />}
                         onPress={() => {
-                            navigation.navigate("TrashDayDetail");
+                            navigation.navigate("TrashDayDetail", {garbage: item.garbage});
                         }}
                     />
                     <Divider />
