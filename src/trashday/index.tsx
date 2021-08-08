@@ -4,6 +4,7 @@ import { List, Text, Divider } from 'react-native-paper';
 import { View, StyleSheet, FlatList, Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/core';
 import OtsuTrashDay from './components/OtsuTrashDay';
+import TrashDayDetail from './components/TrashDayDetail';
 
 // TODO: propsで渡す
 const areas = [
@@ -127,7 +128,7 @@ const TrashDayAreaList = () => {
             </View>
         )}
         />
-    </View>
+        </View>
     );
 }
 
@@ -137,6 +138,7 @@ const TrashDayPage = () => {
         <Stack.Navigator initialRouteName="TrashDayArea">
             <Stack.Screen name="TrashDayArea" component={TrashDayAreaList}/>
             <Stack.Screen name="OtsuTrashDay" component={OtsuTrashDay}/>
+            <Stack.Screen name="TrashDayDetail" component={TrashDayDetail}/>
       </Stack.Navigator>
     );
 }
@@ -148,6 +150,6 @@ const styles = StyleSheet.create({
     list: {
       flex: 1,
     },
-  });
+});
 
 export default TrashDayPage;
