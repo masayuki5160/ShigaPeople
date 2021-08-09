@@ -1,9 +1,36 @@
-import React from 'react';
-import { List, Text, Divider } from 'react-native-paper';
+import React, {useState} from 'react';
+import { List, Text, Divider, Switch } from 'react-native-paper';
 import { View, StyleSheet, FlatList, Alert } from 'react-native';
+import { subscribe, unsubscribe } from '../../common/PushNotifications';
+import { fetchData, storeData } from '../../common/LocalStorage';
+
+// TODO: subscribeするtopicのkeyを何処かに持つ
+const _onToggleSwitch = async (key: string, completion: (subscribeStatus: boolean) => (void)) => {
+    if (key == '') return;
+
+    const subscribeStatus = await _subscribeStatus(key);
+
+    if (subscribeStatus) {
+      unsubscribe(key);
+      await storeData(key, false.toString());
+      completion(false);
+    } else {
+      subscribe(key);
+      await storeData(key, true.toString());
+      completion(true);
+    }
+}
+
+const _subscribeStatus = async (key: string) => {
+    const storedSubscribeStatus = await fetchData(key);
+    return storedSubscribeStatus == 'true' ? true : false;
+}
 
 const detail = ({ route, navigation }) => {
     const {burnable, notburnable, can, plastic, paper, bottle, plasticbottle} = route.params.garbage;
+    const [subscribeStatus, setSubscribeStatus] = useState(false);
+
+    // TODO: 現在のsubscribeStatusを取得して設定する
 
     // TODO: 見た目修正
     // TODO: プッシュ通知のサブスクライブ or ローカルプッシュ通知の登録
@@ -127,6 +154,19 @@ const detail = ({ route, navigation }) => {
             )}
             />
             <Divider />
+
+            <View>
+                <Switch
+                    value={subscribeStatus}
+                    onValueChange={() => {
+                        _onToggleSwitch("Test", (subscribeStatus) => {
+                            // TODO: 実装方法これが良いか確認
+                            setSubscribeStatus(subscribeStatus);
+                            // TODO: 通知購読を確認するアラートダイアログ出す
+                        });
+                    }}
+                />
+            </View>
         </View>
     );
 }
