@@ -7,6 +7,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import AreaStackScreen from './src/areas';
 import ShigaStackScreen from './src/shiga';
 import SettingsScreen from './src/settings';
+import TrashDayPage from './src/trashday';
 
 const Tab = createBottomTabNavigator();
 
@@ -30,6 +31,15 @@ export default function TabNavigator() {
             options={{
               tabBarIcon: ({ color, size }) => (
                 <MaterialCommunityIcons name="format-list-bulleted" size={24} color="black" />
+              ),
+            }}
+          />
+          <Tab.Screen 
+            name="ゴミ捨て日"
+            component={TrashDayPage}
+            options={{
+              tabBarIcon: ({ color, size }) => (
+                <MaterialCommunityIcons name="trash-can-outline" size={24} color="black" />
               ),
             }}
           />
