@@ -3,7 +3,6 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { List, Text, Divider } from 'react-native-paper';
 import { View, StyleSheet, FlatList, Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/core';
-import {TrashDayDetail} from './TrashDayDetail';
 import {GarbageSchedule} from './GarbageType';
 
 const sampleGarbageSchedule: GarbageSchedule = {
