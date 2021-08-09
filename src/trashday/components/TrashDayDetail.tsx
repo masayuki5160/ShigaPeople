@@ -1,9 +1,6 @@
 import React from 'react';
-import { createStackNavigator } from '@react-navigation/stack';
 import { List, Text, Divider } from 'react-native-paper';
 import { View, StyleSheet, FlatList, Alert } from 'react-native';
-import { useNavigation } from '@react-navigation/core';
-import {GarbageDay} from './GarbageType';
 
 const detail = ({ route, navigation }) => {
     const {burnable, notburnable, can, plastic, paper, bottle, plasticbottle} = route.params.garbage;
@@ -19,7 +16,10 @@ const detail = ({ route, navigation }) => {
                 keyExtractor={(item, index) => index.toString()}
                 renderItem={({ item }) => (
                     <View>
-                        <Text>第{item.weekOfMonth}{item.dayOfWeek}</Text>
+                        <List.Item
+                            title={"第" + item.weekOfMonth + item.dayOfWeek}
+                            description={item.area}
+                        />
                         <Divider />
                     </View>
                 )}
@@ -33,7 +33,10 @@ const detail = ({ route, navigation }) => {
                 keyExtractor={(item, index) => index.toString()}
                 renderItem={({ item }) => (
                     <View>
-                        <Text>第{item.weekOfMonth}{item.dayOfWeek}</Text>
+                        <List.Item
+                            title={"第" + item.weekOfMonth + item.dayOfWeek}
+                            description={item.area}
+                        />
                         <Divider />
                     </View>
                 )}
@@ -47,7 +50,10 @@ const detail = ({ route, navigation }) => {
                 keyExtractor={(item, index) => index.toString()}
                 renderItem={({ item }) => (
                     <View>
-                        <Text>第{item.weekOfMonth}{item.dayOfWeek}</Text>
+                        <List.Item
+                            title={"第" + item.weekOfMonth + item.dayOfWeek}
+                            description={item.area}
+                        />
                         <Divider />
                     </View>
                 )}
@@ -61,7 +67,10 @@ const detail = ({ route, navigation }) => {
             keyExtractor={(item, index) => index.toString()}
             renderItem={({ item }) => (
                 <View>
-                    <Text>第{item.weekOfMonth}{item.dayOfWeek}</Text>
+                    <List.Item
+                        title={"第" + item.weekOfMonth + item.dayOfWeek}
+                        description={item.area}
+                    />
                     <Divider />
                 </View>
             )}
@@ -75,7 +84,10 @@ const detail = ({ route, navigation }) => {
             keyExtractor={(item, index) => index.toString()}
             renderItem={({ item }) => (
                 <View>
-                    <Text>第{item.weekOfMonth}{item.dayOfWeek}</Text>
+                    <List.Item
+                        title={"第" + item.weekOfMonth + item.dayOfWeek}
+                        description={item.area}
+                    />
                     <Divider />
                 </View>
             )}
@@ -89,7 +101,10 @@ const detail = ({ route, navigation }) => {
             keyExtractor={(item, index) => index.toString()}
             renderItem={({ item }) => (
                 <View>
-                    <Text>第{item.weekOfMonth}{item.dayOfWeek}</Text>
+                    <List.Item
+                        title={"第" + item.weekOfMonth + item.dayOfWeek}
+                        description={item.area}
+                    />
                     <Divider />
                 </View>
             )}
@@ -103,7 +118,10 @@ const detail = ({ route, navigation }) => {
             keyExtractor={(item, index) => index.toString()}
             renderItem={({ item }) => (
                 <View>
-                    <Text>第{item.weekOfMonth}{item.dayOfWeek}</Text>
+                    <List.Item
+                        title={"第" + item.weekOfMonth + item.dayOfWeek}
+                        description={item.area}
+                    />
                     <Divider />
                 </View>
             )}
