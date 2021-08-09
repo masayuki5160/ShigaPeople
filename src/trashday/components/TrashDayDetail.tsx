@@ -3,18 +3,123 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { List, Text, Divider } from 'react-native-paper';
 import { View, StyleSheet, FlatList, Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/core';
+import {GarbageDay} from './GarbageType';
 
 const detail = ({ route, navigation }) => {
-    const {garbage} = route.params;
-    console.log(garbage.burnable[0].dayOfWeek);
+    const {burnable, notburnable, can, plastic, paper, bottle, plasticbottle} = route.params.garbage;
 
-    // TODO: ゴミ出し情報を表示
+    // TODO: 見た目修正
     // TODO: プッシュ通知のサブスクライブ or ローカルプッシュ通知の登録
     return (
-        <View>
-            <Text>{garbage.burnable[0].dayOfWeek}</Text>
+        <View style={styles.container}>
+            <Text>燃やせるごみ</Text>
+            <FlatList
+                style={styles.list}
+                data={burnable}
+                keyExtractor={(item, index) => index.toString()}
+                renderItem={({ item }) => (
+                    <View>
+                        <Text>第{item.weekOfMonth}{item.dayOfWeek}</Text>
+                        <Divider />
+                    </View>
+                )}
+            />
+            <Divider />
+
+            <Text>プラ容器包装</Text>
+            <FlatList
+                style={styles.list}
+                data={plastic}
+                keyExtractor={(item, index) => index.toString()}
+                renderItem={({ item }) => (
+                    <View>
+                        <Text>第{item.weekOfMonth}{item.dayOfWeek}</Text>
+                        <Divider />
+                    </View>
+                )}
+            />
+            <Divider />
+
+            <Text>燃やせないごみ</Text>
+            <FlatList
+                style={styles.list}
+                data={notburnable}
+                keyExtractor={(item, index) => index.toString()}
+                renderItem={({ item }) => (
+                    <View>
+                        <Text>第{item.weekOfMonth}{item.dayOfWeek}</Text>
+                        <Divider />
+                    </View>
+                )}
+            />
+            <Divider />
+
+            <Text>かん</Text>
+            <FlatList
+            style={styles.list}
+            data={can}
+            keyExtractor={(item, index) => index.toString()}
+            renderItem={({ item }) => (
+                <View>
+                    <Text>第{item.weekOfMonth}{item.dayOfWeek}</Text>
+                    <Divider />
+                </View>
+            )}
+            />
+            <Divider />
+            
+            <Text>紙ごみ</Text>
+            <FlatList
+            style={styles.list}
+            data={paper}
+            keyExtractor={(item, index) => index.toString()}
+            renderItem={({ item }) => (
+                <View>
+                    <Text>第{item.weekOfMonth}{item.dayOfWeek}</Text>
+                    <Divider />
+                </View>
+            )}
+            />
+            <Divider />
+            
+            <Text>透明びん/茶色びん</Text>
+            <FlatList
+            style={styles.list}
+            data={bottle}
+            keyExtractor={(item, index) => index.toString()}
+            renderItem={({ item }) => (
+                <View>
+                    <Text>第{item.weekOfMonth}{item.dayOfWeek}</Text>
+                    <Divider />
+                </View>
+            )}
+            />
+            <Divider />
+
+            <Text>ペットボトル</Text>
+            <FlatList
+            style={styles.list}
+            data={plasticbottle}
+            keyExtractor={(item, index) => index.toString()}
+            renderItem={({ item }) => (
+                <View>
+                    <Text>第{item.weekOfMonth}{item.dayOfWeek}</Text>
+                    <Divider />
+                </View>
+            )}
+            />
+            <Divider />
         </View>
     );
 }
+
+const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+    },
+    list: {
+      flex: 1,
+    },
+});
 
 export default detail;
